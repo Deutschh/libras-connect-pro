@@ -1,6 +1,6 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { useMediaPipe } from "./hooks/useMediaPipe";
-import { recognizeGesture } from "./utils/geometry";
+import { recognizeGesture, checkBimanualGesture } from "./utils/geometry";
 import { speak } from "./services/speech";
 
 function App() {
@@ -42,10 +42,12 @@ function App() {
     let newProgress = { Left: 0, Right: 0 };
     let currentLeft = "Nenhuma";
     let currentRight = "Nenhuma";
+    let landmarksByHand = { Left: null, Right: null };
 
     if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
       results.multiHandLandmarks.forEach((landmarks, index) => {
         const handedness = results.multiHandedness[index].label;
+        landmarksByHand[handedness] = landmarks;
 
         // --- ADICIONE ESTAS 3 LINHAS AQUI ---
         const history = movementBuffer.current[handedness];
@@ -127,6 +129,36 @@ function App() {
     } else {
       gestureCounters.current = { Left: 0, Right: 0 };
       currentActiveGestures.current = { Left: "", Right: "" };
+    }
+
+    const bimanualResult = checkBimanualGesture(
+      landmarksByHand.Left,
+      landmarksByHand.Right,
+    );
+
+    if (bimanualResult === "Casa") {
+      // Se for Casa, sobrepomos o status das duas mãos
+      currentLeft = "Casa";
+      currentRight = "Casa";
+
+      // Aumentamos o contador de progresso de ambas simultaneamente
+      gestureCounters.current.Left++;
+      gestureCounters.current.Right++;
+
+      newProgress.Left = Math.min(
+        (gestureCounters.current.Left / CONFIRMATION_THRESHOLD) * 100,
+        100,
+      );
+      newProgress.Right = Math.min(
+        (gestureCounters.current.Right / CONFIRMATION_THRESHOLD) * 100,
+        100,
+      );
+
+      // Se confirmou a barra, fala "Casa"
+      if (gestureCounters.current.Left === CONFIRMATION_THRESHOLD) {
+        speak("Casa");
+        addToHistory("Casa", "Ambas");
+      }
     }
 
     setProgress(newProgress);

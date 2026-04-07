@@ -102,3 +102,28 @@ export const recognizeGesture = (landmarks, movementHistory = []) => {
 
   return "Mão Detectada";
 };
+
+export const checkBimanualGesture = (leftLandmarks, rightLandmarks) => {
+  if (!leftLandmarks || !rightLandmarks) return null;
+
+  // Calculamos a distância entre as pontas dos dedos indicadores (ponto 8)
+  const tipsDistance = getDistance(leftLandmarks[8], rightLandmarks[8]);
+
+  // Lógica para CASA:
+  // 1. As pontas dos dedos devem estar próximas (distância < 0.1)
+  // 2. Ambas as mãos devem estar abertas (formato da Letra B)
+  const leftFingers = getFingerStates(leftLandmarks);
+  const rightFingers = getFingerStates(rightLandmarks);
+
+  const bothOpen =
+    leftFingers.indicador &&
+    rightFingers.indicador &&
+    leftFingers.medio &&
+    rightFingers.medio;
+
+  if (tipsDistance < 0.1 && bothOpen) {
+    return "Casa";
+  }
+
+  return null;
+};
