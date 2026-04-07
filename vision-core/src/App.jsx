@@ -85,7 +85,7 @@ function App() {
           lineWidth: 4,
         }); // Purple-700
         window.drawLandmarks(canvasCtx, landmarks, {
-          color: "#EF4444",
+          color: "#f9fafb",
           lineWidth: 1,
           radius: 3,
         }); // Red-500

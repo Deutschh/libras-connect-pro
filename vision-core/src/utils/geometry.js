@@ -36,43 +36,58 @@ export const getFingerStates = (landmarks) => {
 export const recognizeGesture = (landmarks, movementHistory = []) => {
   const fingers = getFingerStates(landmarks);
 
-  // 1. Letra A: Todos os dedos principais fechados
+  // --- ALFABETO ESTÁTICO ---
+
+  // 1. Letra A (Já temos)
   if (
     !fingers.indicador &&
     !fingers.medio &&
     !fingers.anelar &&
     !fingers.minimo
-  ) {
+  )
     return "Letra A";
-  }
 
-  // 2. Letra B: Quatro dedos estendidos e polegar dobrado
+  // 2. Letra B (Já temos)
   if (
     fingers.indicador &&
     fingers.medio &&
     fingers.anelar &&
     fingers.minimo &&
     !fingers.polegar
-  ) {
+  )
     return "Letra B";
-  }
 
-  // 3. Lógica para "Oi" (Letra I + Movimento)
-  // Letra I: Apenas o mínimo estendido
+  // 3. Letra L
+  if (
+    fingers.indicador &&
+    fingers.polegar &&
+    !fingers.medio &&
+    !fingers.anelar &&
+    !fingers.minimo
+  )
+    return "Letra L";
+
+  // 4. Letra V
+  if (fingers.indicador && fingers.medio && !fingers.anelar && !fingers.minimo)
+    return "Letra V";
+
+  // 5. Letra W
+  if (fingers.indicador && fingers.medio && fingers.anelar && !fingers.minimo)
+    return "Letra W";
+
+  // 6. Letra D (Lógica de anel: indicador em pé, outros juntos)
+  if (fingers.indicador && !fingers.medio && !fingers.anelar && !fingers.minimo)
+    return "Letra D";
+
+  // --- GESTOS DINÂMICOS ---
+
+  // 7. Letra I / Sinal "Oi" (Já temos)
   const isLetterI =
     !fingers.indicador && !fingers.medio && !fingers.anelar && fingers.minimo;
-
   if (isLetterI) {
-    // Se houver histórico de movimento, checamos a oscilação lateral (eixo X)
     if (movementHistory.length > 5) {
       const xPositions = movementHistory.map((p) => p.x);
-      const minX = Math.min(...xPositions);
-      const maxX = Math.max(...xPositions);
-
-      // Se a mão balançou mais de 10% da largura da tela enquanto fazia o "I"
-      if (maxX - minX > 0.1) {
-        return "Oi!";
-      }
+      if (Math.max(...xPositions) - Math.min(...xPositions) > 0.1) return "Oi!";
     }
     return "Letra I";
   }
