@@ -1,27 +1,63 @@
-# 🧤 Libras-Connect Pro
+<div align="center">
 
-> Tradução bimanual de Libras em tempo real com identidade vocal via IA.
+<img src="()" alt="Logo do Luvia" width="120px">
 
-## 🚀 Sobre o Projeto
-[cite_start]O **Libras-Connect Pro** é uma tecnologia assistiva que utiliza um par de luvas inteligentes para traduzir sinais de Libras em voz audível. [cite_start]O projeto foca na humanização, utilizando clonagem de voz para que o usuário mantenha sua assinatura sonora[cite: 2, 34].
+# Luvia - Sistema Bimanual Tradutor de Libras com IA para Voz
 
-## 🛠️ Tecnologias Principais
-- [cite_start]**Hardware:** ESP32-S3, Sensores Spectra Symbol e IMU BNO055[cite: 20, 21].
-- [cite_start]**Mobile:** React Native & SQLite[cite: 25].
-- [cite_start]**Backend:** Node.js & Firebase[cite: 27].
-- [cite_start]**IA:** ElevenLabs/Coqui TTS para clonagem de voz[cite: 26].
-- [cite_start]**Visão Computacional:** MediaPipe Hands (Protótipo Vision Core)[cite: 49, 52].
+> **Luvia** é uma tecnologia assistiva composta por um par de luvas inteligentes que traduzem os movimentos da Língua Brasileira de Sinais (Libras) em voz audível em tempo real.
 
-## 🌟 Funcionalidades
-- [cite_start]**Sistema Bimanual:** Tradução de sinais complexos[cite: 3].
-- [cite_start]**Clonagem de Voz:** Identidade vocal personalizada[cite: 16].
-- [cite_start]**Gramática Física:** Botões para interrogação, negação e exclamação[cite: 5, 32].
-- [cite_start]**Independência:** Alto-falantes integrados nos pulsos[cite: 4].
+</div>
 
-## 📂 Como navegar
-- [cite_start]`/vision-core`: Prova de conceito via câmera (requisito inicial)[cite: 49].
-- [cite_start]`/hardware`: Código C++ para os microcontroladores das luvas[cite: 20].
-- [cite_start]`/mobile`: Código fonte do app de integração[cite: 25].
+<br>
 
----
-Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC).
+## O que é o Luvia?
+
+O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação entre surdos e ouvintes[cite: 47]. [cite_start]Diferente de outras soluções, ele foca na **identidade do usuário**, permitindo que a pessoa "fale" com uma voz que a represente e resolva complexidades gramaticais através de comandos físicos.
+
+- **Tradução em tempo real:** Conversão de sinais em fala sintetizada.
+- **Humanização:** Clonagem de voz via IA para manter a "assinatura sonora" do usuário.
+- **Gramática Integrada:** Botões de expressão para definir frases interrogativas, negativas ou exclamativas.
+- **Autonomia:** Alto-falantes integrados nos pulsos para independência de dispositivos externos.
+
+<br>
+
+## Estrutura do Projeto
+
+- **App/Front-End/**: Interface desenvolvida em React Native para gestão e treino.
+- **App/Back-End/**: API em Node.js para processamento e sincronização via Firebase.
+- **IoT/**: Código em C++ para o processamento dos sensores no ESP32-S3.
+- **Documentação/**: Planejamento de desenvolvimento e guia de calibração.
+
+<br>
+
+**Tecnologias e Frameworks (Software):**
+
+![React Native](https://img.shields.io/badge/React_Native-0162FF?style=for-the-badge&logo=react&logoColor=white) &nbsp;
+![Node.js](https://img.shields.io/badge/Node.js-0091FF?style=for-the-badge&logo=node.js&logoColor=white) &nbsp;
+![Firebase](https://img.shields.io/badge/Firebase-0162FF?style=for-the-badge&logo=firebase&logoColor=white)
+
+<br>
+
+**Linguagens e Hardware (IoT):**
+
+![C++](https://img.shields.io/badge/C++-0091FF?style=for-the-badge&logo=c%2B%2B&logoColor=white) &nbsp;
+![ESP32](https://img.shields.io/badge/ESP32--S3-0162FF?style=for-the-badge&logo=espressif&logoColor=white) &nbsp;
+![Bluetooth LE](https://img.shields.io/badge/Bluetooth_LE-0091FF?style=for-the-badge&logo=bluetooth&logoColor=white)
+
+<br>
+
+## Funcionalidades Principais
+
+- **Sistema Bimanual:** Tradução de sinais complexos que exigem o uso das duas mãos.
+- **Clonagem de Voz (IA):** Integração com APIs como ElevenLabs para personalização do timbre.
+- **Calibração Dinâmica:** Ajuste automático da tradução se o usuário estiver em pé ou sentado.
+- **Dicionário Customizável:** Possibilidade de adicionar novas gírias e sinais regionalizados.
+- **Feedback Háptico:** Vibrações nos motores internos para confirmar que o sinal foi entendido.
+- **Módulo de Treino:** Aba interativa para aperfeiçoamento da precisão dos sinais.
+
+  ---
+
+  <div align="center">
+
+<img src="()" alt="Logo do Luvia" width="120px">
+</div>
