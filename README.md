@@ -1,18 +1,21 @@
 <div align="center">
 
-<img src="()" alt="Logo do Luvia" width="120px">
+<img src="https://github.com/Deutschh/Luvia/blob/89d56ef1619eb0d359791fba594a2042534ee969/Front-End/imagens/logo.png" alt="Logo do Luvia" width="150px">
+
+</div>
 
 # Luvia - Sistema Bimanual Tradutor de Libras com IA para Voz
 
-> **Luvia** é uma tecnologia assistiva composta por um par de luvas inteligentes que traduzem os movimentos da Língua Brasileira de Sinais (Libras) em voz audível em tempo real.
+> **Luvia** é uma tecnologia assistiva composta por um par de luvas inteligentes que traduzem os movimentos da Língua Brasileira de Sinais (Libras) em voz audível em tempo real. Atualmente está no processo inicial (prototipagem).
 
 </div>
 
 <br>
+<br>
 
 ## O que é o Luvia?
 
-O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação entre surdos e ouvintes[cite: 47]. [cite_start]Diferente de outras soluções, ele foca na **identidade do usuário**, permitindo que a pessoa "fale" com uma voz que a represente e resolva complexidades gramaticais através de comandos físicos.
+O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação entre surdos e ouvintes. Diferente de outras soluções, ele foca na **identidade do usuário**, permitindo que a pessoa "fale" com uma voz que a represente e resolva complexidades gramaticais através de comandos físicos.
 
 - **Tradução em tempo real:** Conversão de sinais em fala sintetizada.
 - **Humanização:** Clonagem de voz via IA para manter a "assinatura sonora" do usuário.
@@ -29,6 +32,7 @@ O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação
 - **Documentação/**: Planejamento de desenvolvimento e guia de calibração.
 
 <br>
+<br>
 
 **Tecnologias e Frameworks (Software):**
 
@@ -37,6 +41,7 @@ O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação
 ![Firebase](https://img.shields.io/badge/Firebase-0162FF?style=for-the-badge&logo=firebase&logoColor=white)
 
 <br>
+<br>
 
 **Linguagens e Hardware (IoT):**
 
@@ -44,6 +49,7 @@ O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação
 ![ESP32](https://img.shields.io/badge/ESP32--S3-0162FF?style=for-the-badge&logo=espressif&logoColor=white) &nbsp;
 ![Bluetooth LE](https://img.shields.io/badge/Bluetooth_LE-0091FF?style=for-the-badge&logo=bluetooth&logoColor=white)
 
+<br>
 <br>
 
 ## Funcionalidades Principais
@@ -55,9 +61,10 @@ O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação
 - **Feedback Háptico:** Vibrações nos motores internos para confirmar que o sinal foi entendido.
 - **Módulo de Treino:** Aba interativa para aperfeiçoamento da precisão dos sinais.
 
-  ---
+<br>
+<br>
 
-  <div align="center">
+<div align="center">
 
-<img src="()" alt="Logo do Luvia" width="120px">
+<img src="https://github.com/Deutschh/Luvia/blob/89d56ef1619eb0d359791fba594a2042534ee969/Front-End/imagens/logo.png" alt="Logo do Luvia" width="120px">
 </div>
