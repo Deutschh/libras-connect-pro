@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "bundleIdentifier": "com.joaopedro.luvia",
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.joaopedro.luvia",
@@ -42,9 +45,9 @@
       "expo-web-browser",
       "expo-secure-store",
       [
-      "@react-native-google-signin/google-signin",
+        "@react-native-google-signin/google-signin",
         {
-         "iosUrlScheme": "com.googleusercontent.apps.740321488838-8vdas7acqma2jnng5cqkpil03n9v3nkf"
+          "iosUrlScheme": "com.googleusercontent.apps.740321488838-8vdas7acqma2jnng5cqkpil03n9v3nkf"
         }
       ]
     ],

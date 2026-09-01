@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/Deutschh/Luvia/blob/89d56ef1619eb0d359791fba594a2042534ee969/Front-End/imagens/logo.png" alt="Logo do Luvia" width="150px">
+<img src="https://github.com/Deutschh/Luvia/blob/f2acf12c59a878582f1c3c3604b4f52b8978c3dc/Luvia/App/assets/images/Luvia/Logo.png" alt="Logo do Luvia" width="150px">
 
 </div>
 
@@ -66,5 +66,5 @@ O **Luvia** é uma plataforma projetada para quebrar a barreira de comunicação
 
 <div align="center">
 
-<img src="https://github.com/Deutschh/Luvia/blob/89d56ef1619eb0d359791fba594a2042534ee969/Front-End/imagens/logo.png" alt="Logo do Luvia" width="120px">
+<img src="https://github.com/Deutschh/Luvia/blob/f2acf12c59a878582f1c3c3604b4f52b8978c3dc/Luvia/App/assets/images/Luvia/Logo.png" alt="Logo do Luvia" width="120px">
 </div>
